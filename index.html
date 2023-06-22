@@ -1,0 +1,337 @@
+<?php include('serverpage.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>photography</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="./mobile.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <!-- aos --> 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo"><a href="#">Avinash GJ</a></div>
+      <ul class="menu-list">
+      <div class="icon cancel-btn">
+        <i class="fas fa-times"></i>
+      </div>
+            <li><a href="#home" class="home">Home</a></li>
+            <li><a href="#about" class="about">About</a></li>
+            <li><a href="#services" class="services">Services</a></li>
+            <li><a href="#albums" class="albums">Albums</a></li>
+            <li><a href="#contact" class="contact">Contact</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <!--home section starts-->
+  <section class="home-section" id="home">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="home-content">
+          <h4>I'm avinash</h4>
+          <h1>Photographer</h1>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down">
+      <img src="img/icons/arrow-down.svg" alt="scroll-down">
+    </a>
+  </section>
+  <!--home section ends-->
+
+  <!--About section strats-->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="row about-me">
+        <div class="about-img">
+          <div class="img-box">
+            <img src="img/about.jpg" alt="about me">
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="row">
+            <div class="section-title">
+              <h1>About Me</h1>
+            </div>
+          </div>
+          <p>"In the world of photography, you get to share a captured moment with other people."</p>
+
+          <div class="stats">
+            <div class="row">
+              <div class="stats-box">
+                <h2 id="awards">12</h2>
+                <h5>Awards won</h5>
+              </div>
+              <div class="stats-box">
+                <h2 id="projects">50</h2>
+                <h5>Projects Done</h5>
+              </div>
+              <div class="stats-box">
+                <h2 id="clients">200</h2>
+                <h5>happy Clients</h5>
+              </div>
+              <div class="stats-box">
+                <h2 id="shoots">1200</h2>
+                <h5>All shoots</h5>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-01">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--About section ends-->
+
+  <!--Service section starts-->
+  <section class="service-section" id="services">
+    <div class="container">
+      <div class="row">
+        <div  class="section-title">
+          <h1>Our Services</h1>
+        </div>
+      </div>
+      <div class="row servies-row">
+        <div class="service-item" data-aos="zoom-in" animation-delay="600">
+          <div class="service-item-inner">
+            <img src="img/service/1.jpg" alt="service" >
+            <div class="overlay">
+              <h4>Wedding Photography</h4>
+            </div>
+          </div>
+        </div>
+        <div class="service-item" data-aos="zoom-in" animation-delay="600">
+          <div class="service-item-inner">
+            <img src="img/service/2.jpg" alt="service">
+            <div class="overlay">
+              <h4>Travel Photography</h4>
+            </div>
+          </div>
+        </div>
+        <div class="service-item" data-aos="zoom-in" animation-delay="600">
+          <div class="service-item-inner">
+            <img src="img/service/3.jpg" alt="service">
+            <div class="overlay">
+              <h4>Event Photography</h4>
+            </div>
+          </div>
+        </div>
+        <div class="service-item" data-aos="zoom-in" animation-delay="600">
+          <div class="service-item-inner">
+            <img src="img/service/4.jpg" alt="service">
+            <div class="overlay">
+              <h4>Portrait Photography</h4>
+            </div>
+          </div>
+        </div>
+        <div class="service-item" data-aos="zoom-in" animation-delay="600">
+          <div class="service-item-inner">
+            <img src="img/service/5.jpg" alt="service">
+            <div class="overlay">
+              <h4>Fashion Photography</h4>
+            </div>
+          </div>
+        </div>
+        <div class="service-item" data-aos="zoom-in" animation-delay="600">
+          <div class="service-item-inner">
+            <img src="img/service/6.jpg" alt="service">
+            <div class="overlay">
+              <h4>Anniversary Photography</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Service section ends-->
+
+  <!--albums section starts-->
+   <section class="album-section" id="albums">
+      <div class="container">
+        <div class="row">
+          <div  class="section-title ">
+          <h1>Our Albums</h1>
+        </div>
+        </div>
+        <div class="albums-list">
+ <ul>
+   <li class="color new" onclick="albumDisplay('0')">Wedding</li>
+     <li class="color" onclick="albumDisplay('1')">Travel</li>
+      <li class="color" onclick="albumDisplay('2')">Event</li>
+       <li class="color" onclick="albumDisplay('3')">Portrait</li>
+        <li  class="color" onclick="albumDisplay('4')">Fashion</li>
+  </ul>
+  <div class="imgs-list">
+    <div class="albimg show" >
+      <img src="img/albums/wedding/1.jpg" data-aos="zoom-in">
+      <img src="img/albums/wedding/2.jpg" data-aos="zoom-in">
+      <img src="img/albums/wedding/3.jpg" data-aos="zoom-in">
+      <img src="img/albums/wedding/4.jpg" data-aos="zoom-in">
+      <img src="img/albums/wedding/5.jpg" data-aos="zoom-in">
+      <img src="img/albums/wedding/6.jpg" data-aos="zoom-in">
+      <img src="img/albums/wedding/7.jpg" data-aos="zoom-in">
+      <img src="img/albums/wedding/8.jpg" data-aos="zoom-in">
+      <img src="img/albums/wedding/9.jpg" data-aos="zoom-in">
+      <img src="img/albums/wedding/10.jpg" data-aos="zoom-in">
+      <img src="img/albums/wedding/11.jpg" data-aos="zoom-in">
+      <img src="img/albums/wedding/12.jpg" data-aos="zoom-in">
+    </div>
+    <div class="albimg" data-aos="zoom-in">
+      <img src="img/albums/travel/1.jpg">
+      <img src="img/albums/travel/2.jpg">
+      <img src="img/albums/travel/3.jpg">
+      <img src="img/albums/travel/4.jpg">
+      <img src="img/albums/travel/5.jpg">
+      <img src="img/albums/travel/6.jpg">
+      <img src="img/albums/travel/7.jpg">
+      <img src="img/albums/travel/8.jpg">
+      <img src="img/albums/travel/9.jpg">
+      <img src="img/albums/travel/10.jpg">
+      <img src="img/albums/travel/11.jpg">
+      <img src="img/albums/travel/12.jpg">
+    </div>
+    <div class="albimg">
+       <img src="img/albums/event/1.jpg">
+       <img src="img/albums/event/2.jpg">
+       <img src="img/albums/event/3.jpg">
+       <img src="img/albums/event/4.jpg">
+       <img src="img/albums/event/5.jpg">
+       <img src="img/albums/event/6.jpg">
+       <img src="img/albums/event/7.jpg">
+       <img src="img/albums/event/9.jpg">
+       <img src="img/albums/event/10.jpg">
+       <img src="img/albums/event/11.jpg">
+       <img src="img/albums/event/12.jpg">
+    </div>
+    <div class="albimg">
+      <img src="img/albums/portrait/1.jpg">
+      <img src="img/albums/portrait/2.jpg">
+      <img src="img/albums/portrait/3.jpg">
+      <img src="img/albums/portrait/4.jpg">
+      <img src="img/albums/portrait/5.jpg">
+      <img src="img/albums/portrait/6.jpg">
+      <img src="img/albums/portrait/7.jpg">
+      <img src="img/albums/portrait/8.jpg">
+      <img src="img/albums/portrait/9.jpg">
+      <img src="img/albums/portrait/10.jpg">
+      <img src="img/albums/portrait/11.jpg">
+      <img src="img/albums/portrait/12.jpg">
+    </div>
+    <div class="albimg">
+      <img src="img/albums/fashion/1.jpg">
+      <img src="img/albums/fashion/2.jpg">
+      <img src="img/albums/fashion/3.jpg">
+      <img src="img/albums/fashion/4.jpg">
+      <img src="img/albums/fashion/5.jpg">
+      <img src="img/albums/fashion/6.jpg">
+      <img src="img/albums/fashion/7.jpg">
+      <img src="img/albums/fashion/8.jpg">
+      <img src="img/albums/fashion/9.jpg">
+      <img src="img/albums/fashion/10.jpg">
+      <img src="img/albums/fashion/11.jpg">
+      <img src="img/albums/fashion/12.jpg">
+    </div>
+  </div>
+</div>
+</section>
+  <!--albums section ends-->
+  
+
+  <!-- contact section starts -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-img">
+          <div class="img-box">
+            <div class="section-title">
+              <h1>Contact Me</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="contact-form">
+          <form class="form" action="index.php" method="post">
+            <div class="row">
+              <div class="left input-group">
+                <label>Name</label>
+                <input type="text" placeholder="Enter Your Name" class="input-control" name="name">
+              </div>
+              <div class="right input-group">
+                <label>Email or Phone</label>
+                <input type="text" placeholder="Enter Your Email or Phone" class="input-control" name="email">
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-group">
+                <label>Message</label>
+                <textarea class="input-control" placeholder="Your Message Here" name="message"></textarea>
+              </div>
+            </div>
+            <div class="form-btn">
+              <input type="submit" class="btn btn-01" name="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="contact-info">
+          <div class="row">
+            <div class="info-item">
+              <h5>Contact info</h5>
+              <p>Block-3 , gf-4, Kakinada</p>
+              <p>91 7288994929</p>
+              <p>contact@avinashGJ.com</p>
+              <p>avinashGJ.com</p>
+
+            </div>
+            <div class="info-item">
+              <h5>About Me</h5>
+              <p>Company</p>
+              <p>Projects</p>
+              <p>Events</p>
+              <p>Awards</p>
+              
+            </div>
+            <div class="info-item">
+              <h5>Services</h5>
+              <p>Photographer</p>
+              <p>Videography</p>
+              <p>Visual Efffects</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="social-links">
+          <a href="https://www.facebook.com/avinash.gj.3/" title="facebook"><img src="img/icons/facebook.svg" alt="facebook"></a>
+          <a href="https://www.linkedin.com/in/giduthuri-jaya-avinash-0293a3255/" title="linkedin"><img src="img/icons/linkedin.svg" alt="linkedin"></a>
+          <a href="https://www.instagram.com/_avi__giduthuri_/" title="instagram"><img src="img/icons/instagram.svg" alt="instagram"></a>
+        </div>
+      </div>
+    </div>
+   
+  </section>
+  <footer>
+    <hr>
+  <div class="copyright">
+    <h4>&copy; Avinash GJ. All rights reserved</h4>
+   
+  </div>
+  </footer>
+  <!-- service section ends -->
+  <script>
+    AOS.init();
+    
+  </script>
+  <script src="./jsfile.js"></script>
+</body>
+</html>
